@@ -1,0 +1,109 @@
+- mui: 
+  - standard_cdn: 
+    css: 
+      - "htts://cdn.muicss.com/mui-0.9.35/css/mui.min.css"
+    js: 
+      - "https://cdn.muicss.com/mui-0.9.35/js/mui.min.js"
+  - ipfs_cdn: 
+    css: 
+      - "https://ipfs.io/ipfs/QmPWvEzDCdRQtEmFdZnDsnTdwnuBGW7VHzYyfHbRJY8uxw/materialize.min.css"
+    js:  
+      - "https://ipfs.io/ipfs/QmPWvEzDCdRQtEmFdZnDsnTdwnuBGW7VHzYyfHbRJY8uxw/materialize.min.js"
+  - local_cdn: 
+    css: 
+    js: 
+  github_cdn: 
+    css: 
+    js: 
+- mdb: 
+  standard_cdn: 
+    css: 
+      - "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+      - "https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    js: 
+      - "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      - "https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+      - "https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+  ipfs_cdn: 
+    css: 
+      - "https://ipfs.io/ipfs/"
+      - "https://ipfs.io/ipfs/"
+    js:
+      - "https://ipfs.io/ipfs/"
+      - "https://ipfs.io/ipfs/"
+      - "https://ipfs.io/ipfs/"
+  local_cdn: 
+    css: 
+    js: 
+  github_cdn: 
+    css: 
+    js: 
+- materialize: 
+  standard_cdn: 
+    css:
+      - "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css"
+    js: 
+      - "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"
+  ipfs_cdn: 
+    css: 
+      - "https://ipfs.io/ipfs/QmZjRLPbC5TRshn1zmJQU7KWVj125y7xx68GS7vkAwbWdv/materialize.min.css"
+    js: 
+      - "https://ipfs.io/ipfs/QmZjRLPbC5TRshn1zmJQU7KWVj125y7xx68GS7vkAwbWdv/materialize.min.js"
+  local_cdn: 
+    css: 
+    js: 
+  github_cdn: 
+    css: 
+    js: 
+- bootstrap: 
+  standard_cdn: 
+    css: 
+      - "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    js: 
+      - "https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      - "https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+      - "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+  ipfs_cdn: 
+    css: 
+      - "https://ipfs.io/ipfs/"
+    js: 
+      - "https://ipfs.io/ipfs/"
+  local_cdn: 
+    css: 
+    js: 
+  github_cdn: 
+    css: 
+    js: 
+- foundation: 
+  standard_cdn: 
+    css: 
+      - "https://cdn.jsdelivr.net/foundation/5.5.0/css/foundation.css"
+    js: 
+      - "https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      - "https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js"
+  ipfs_cdn: 
+  css: 
+    - "https://ipfs.io/ipfs/"
+  js: 
+    - "https://ipfs.io/ipfs/"
+  local_cdn: 
+    css: 
+    js: 
+  github_cdn: 
+    css: 
+    js: 
+- mdc: 
+  standard_cdn: 
+    css: 
+      - "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    js: 
+  ipfs_cdn: 
+    css: 
+      - "https://ipfs.io/ipfs/QmQGgLSemG8rLUZYxiMViB7b7E1qFiyV3MKcHFCtm66qiW/material-components-web.min.css"
+    js: 
+  local_cdn: 
+    css: 
+    js: 
+  github_cdn: 
+    css: 
+    js: 

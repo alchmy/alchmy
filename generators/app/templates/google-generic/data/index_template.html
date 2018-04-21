@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+        <title>SPINE Components</title>
+        <meta name="description" content="Using Storj, Polymer, Ipfs, Node, and Express to create Modular Decentralized Web Apps quickly">
+        <base href="/">
+        <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+        <script src="lib/getData.js"></script>
+        <script type="text/javascript">
+//            console.log(frameworks)
+            for (var i=0; i<frameworks.length;i++){
+                console.log(frameworks[i].title);
+            }
+        </script>
+        <!--MODULES-->
+			<script type="module" src="./src/components/materialize-footer.js"></script>
+			<script type="module" src="./src/components/materialize-navbar.js"></script>
+			<script type="module" src="./src/components/materialize-card-image.js"></script>
+        <!--/MODULES-->
+        <!--STYLES-->
+            <link rel="stylesheet" href="https://ipfs.io/ipfs/QmZjRLPbC5TRshn1zmJQU7KWVj125y7xx68GS7vkAwbWdv/materialize.min.css"></link>
+            <script src="https://ipfs.io/ipfs/QmZjRLPbC5TRshn1zmJQU7KWVj125y7xx68GS7vkAwbWdv/materialize.min.js"></script>
+            <style>
+                materialize-footer, materialize-navbar{
+                    --theme-primary: rgba(30,60,80,1);
+                    --theme-primary-light: rgba(40,60,80,1);
+                    --theme-primary-dark: rgba( 10,20,30,1);
+                }
+            </style>
+        <!--/STYLES-->
+    </head>
+    <body>
+        <main>
+            <materialize-navbar>
+                <li slot="left"><a>LucentMonkey</a></li>
+                <li slot="center"><a>LucentMonkey</a></li>
+                <li slot="right"><a>about</a></li>
+                <li slot="right"><a>services</a></li>
+                <li slot="right"><a>contact</a></li>
+            </materialize-navbar>
+            <section class="row" id="tile-section">
+    
+                <materialize-card-image is="dom-repeat" items="{{frameworks}}"
+                                    class="col s12 m6 l4 xl3" title="Polymer 3" 
+                                    img="https://ipfs.io/ipfs/Qmc5y967j1jaPwn4rHXEp5H97NZnYtUqVtL4kTjrzhByXk/polymer.png"
+                                    content="Polymer3 is cool and uses ES6!"
+                                    action="Go to Polymer!"
+                                    actionLink="https://www.webcomponents.org/collection/Polymer/elements">
+               </materialize-card-image>
+           
+           
+           
+           
+           
+           
+           <materialize-card-image class="col s12 m6 l4 xl3" title="Polymer 3" 
+                                    img="https://ipfs.io/ipfs/Qmc5y967j1jaPwn4rHXEp5H97NZnYtUqVtL4kTjrzhByXk/polymer.png"
+                                    content="Polymer3 is cool and uses ES6!"
+                                    action="Go to Polymer!"
+                                    actionLink="https://www.webcomponents.org/collection/Polymer/elements">
+           </materialize-card-image>
+           <materialize-card-image class="col s12 m6 l4 xl3" title="Semantic-UI" 
+                                   img="https://ipfs.io/ipfs/QmbFkxgkpzrqgQXC18EoAVg1KmfaBNzJzK2Nx6P7E12oCB/semantic-ui.png"
+                                   content="Semantic-ui is modern and clean!"
+                                   action="Go to Semantic-UI!"
+                                   actionLink="https://semantic-ui.com">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="Material Design Components" 
+                                    img="https://ipfs.io/ipfs/QmTrurm1YxU46cusGTbdNTfGFooeWXWVEtZJ95cLrzmfg3/1498838169Material_Components_for_the_Web.png"
+                                    content="Material Components built by Google!"
+                                    action="Go to Material Components!"
+                                    actionLink="https://material.io/components/web/catalog/">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="MaterializeCSS" 
+                                    img="https://ipfs.io/ipfs/QmTR7LWKrDasXdb7sUDV7xxpj5uDgXDjbCbzdqGfMPT3xW/materialize.jpg"
+                                    content="CSS framework based on Material Design."
+                                    action="Go to MaterializeCSS!"
+                                    actionLink="http://next.materializecss.com">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="MUICSS" 
+                                    img="https://ipfs.io/ipfs/QmQ6ZxxcQLA7FcJtYhWKzqvpmvNJzp4cva8GDEuYmoQ5co/mui.png"
+                                    content="Minimalist Material Design framework."
+                                    action="Go to MUICSS!"
+                                    actionLink="https://muicss.com">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="Simpla" 
+                                    img="https://ipfs.io/ipfs/QmRH9QE952uwEWWu34PhPsrDvanAqWgWfYbeSUW6zc9vgL/simpla.svg"
+                                    content="Minimal Components great for user editing."
+                                    action="Go to Simpla!"
+                                    actionLink="https://www.simplajs.org">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="Material Bootstrap" 
+                                    img="https://ipfs.io/ipfs/QmQjNi3F2V3tkrUpxwfssXZfnWqEXcmcSYpeL7xex9Gboy/MD4B.svg"
+                                    content="Material Design for Bootstrap."
+                                    action="Go to Material Bootstrap!"
+                                    actionLink="https://mdbootstrap.com">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="Bootstrap" 
+                                    img="https://ipfs.io/ipfs/QmTrurm1YxU46cusGTbdNTfGFooeWXWVEtZJ95cLrzmfg3/bootstrap-social.png"
+                                    content="Possibly the most popular CSS framework."
+                                    action="Go to Bootstrap!"
+                                    actionLink="https://getbootstrap.com">
+            </materialize-card-image>
+            <materialize-card-image class="col s12 m6 l4 xl3" title="Foundation" 
+                                    img="https://ipfs.io/ipfs/QmTrurm1YxU46cusGTbdNTfGFooeWXWVEtZJ95cLrzmfg3/foundation-logo.jpg"
+                                    content="Modern Comprehensive CSS Framework"
+                                    action="Go to Foundation!"
+                                    actionLink="https://foundation.zurb.com">
+            </materialize-card-image>
+            </section>
+        </main>
+            <materialize-footer></materialize-footer>
+            <!--SCRIPTS-->
+    <script>
+                for (var i=0;i<frameworks.length; i++){
+                    var tile=document.createElement("materialize-card-image");
+                    tile.setAttribute("class","col s12 m6 l4 xl3");
+                    tile.setAttribute("img",frameworks[i].img);
+                    tile.setAttribute("content",frameworks[i].content);
+                    tile.setAttribute("action",frameworks[i].action);
+                    tile.setAttribute("actionLink",frameworks[i].actionLink);
+                    document.getElementById("tile-section").appendChild(tile);
+                }
+            </script>
+        <!--/SCRIPTS-->
+	</body>
+</html>

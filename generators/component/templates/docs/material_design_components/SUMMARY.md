@@ -1,0 +1,8 @@
+# [Material Design Web Components](https://material.io/components/web/catalog) - 
+### Official Library based on Material Design. 
+
+Though called Web Components, there are no prebuilt custom web components in "Material Web Components". They give you tools to build components yourself. There are javascript 'Modules' as well as css classes and sass to apply to html elements. At this point, you are not really making components, you are just doing traditional web design, except for the case that the modules, in combination with directives in Angular make it easy for Google developers to make custom elements this way. Fortunately the Angular workflow is pretty close to Polymer3, which both make separate files for each component which is then usable as an html tag in your webapp. However, the lack of prebuilt elements does have some negatives, especially for this project which sees some value in prebuilt elements as they can be served quickly from a distributed torrent network.
+
+The Web components also do not include their own dependencies, you must manually import everything. When this project is finished, you should be able to type `spinec add mdc-element` to be able to use prebuilt element with all the dependencies imported. This is much easier than the current method, which with Angular-cli is to create a new component, then go to the website, copy javascript code into your module, copy depencies into the module, copy html templates into the module, work out bugs and color themes, then use the component in html.
+
+Bugs and color themes might still occur, but automation will make it easier, and components can be built to inherit styles from the main DOM tree.

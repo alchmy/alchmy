@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+        <title><%= app_name %></title>
+		<meta name="description" content="Using Storj, Polymer, Ipfs, Node, and Express to create Modular Decentralized Web Apps quickly">
+		<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+		<script src="../node_modules/browser-es-module-loader/dist/babel-browser-build.js"></script>
+        <script src="../node_modules/browser-es-module-loader/dist/browser-es-module-loader.js"></script>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+	</head>
+	<body>
+		<header>
+	<!-- materialize-navbar( right_link_1='#libraries', right_tab_1='libraries', right_link_2='#about', right_tab_2='about', right_link_3='#contribute', right_tab_3='contribute')-->
+    		<app-header reveals="">
+	        	<app-toolbar elevation="1">
+            		<paper-icon-button icon="menu" onclick="drawer.toggle()">menu</paper-icon-button>
+                    <div main-title=""><%= app_name %></div>
+            		<paper-icon-button icon="delete" onclick="drawer.toggle()">delete</paper-icon-button>
+                	<paper-icon-button icon="search" onclick="drawer.toggle()">search</paper-icon-button>
+            		<paper-icon-button icon="close" onclick="drawer.toggle()">close</paper-icon-button>
+        		</app-toolbar>
+        	</app-header>
+    		<app-drawer id="drawer" swipe-open=""></app-drawer>
+        	<sample-content 10="" size=""></sample-content>
+    	</header>
+    	<main>
+    		<app-layout></app-layout>
+        	<materialize-column>
+               	<section id="tile-section">
+        	    	<materialize-panel id="ONE"></materialize-panel>
+                </section>
+                <section>
+                    <img src="../images/favicon.svg" width="50%"/>
+                </section>
+    		</materialize-column>
+		</main>
+		<materialize-footer></materialize-footer>
+	</body>
+</html>
