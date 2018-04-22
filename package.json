@@ -1,5 +1,5 @@
 {
-  "name": "@alchmy/generator-alchmy-cli",
+  "name": "@alchmy/generator-alchmy",
   "version": "0.0.01",
   "description": "a generator for mixing web components and constructing distributed apps. Utilizes Polymer IPFS Node Express.",
   "homepage": "https://alchmy.github.io/alchmy-cli",
