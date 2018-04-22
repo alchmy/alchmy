@@ -4,6 +4,10 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
+    constructor(args, opts) {
+        super(args, opts);
+        this.option('babel'); // This method adds support for a `--babel` flag
+    }
     prompting() {
         this.log(
             yosay(

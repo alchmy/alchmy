@@ -1,29 +1,20 @@
-# <a name="introduction"></a> PINE Web Components 
-
-[![polymer-image](https://ipfs.io/ipfs/QmXcmDzTAWsAtUQVpybo5zF3FVw9qyUZDh3ujDD2WerLxd/polymer-3.0-da89b4.svg)](https://www.polymer-project.org/blog/2017-08-23-hands-on-30-preview)
-[![ipfs-image](https://ipfs.io/ipfs/QmXcmDzTAWsAtUQVpybo5zF3FVw9qyUZDh3ujDD2WerLxd/ipfs-0.4.13-256272.svg)](https://ipfs.io)
-[![npm-image](https://ipfs.io/ipfs/QmXcmDzTAWsAtUQVpybo5zF3FVw9qyUZDh3ujDD2WerLxd/npm-5.6.1-e42a2a.svg)](https://npmjs.org)
-[![express-image](https://ipfs.io/ipfs/QmXcmDzTAWsAtUQVpybo5zF3FVw9qyUZDh3ujDD2WerLxd/express-4.16.0-cacdcf.svg)](https://expressjs.com)
-
 *BE WARNED THIS IS NOT PRODUCTION READY, UNLESS YOU HAVE PLANS TO HELP ITS NOT WORTH DOWNLOADING,* **IT'S VERY MUCH A LIVING DOCUMENT!**
 
-SPINE Components. A generator for installing SPINE web components and hosting them in a decentralized database. SPINE is an acronym for Storj Polymer IPFS Node Express.
+# alchmy-cli
+
+A generator for the Alchmy ecosystem that makes it easy to add components from the ecosystem onto a webpage. Making it trivial to create beautiful webpages. Moreover, Alchmy is designed to be decentralized, so that the individual components can be downloaded separately, which, at scale, means that much of the data from many websites will already be cached. Reusable, fast, easy-to-use, easy-to-maintain.
+
 
 ## <a name="summary"></a> Summary
 
-`pine-cli` is a cli tool for quickly adding and creating webcomponents from several different libraries. For adding prebuilt components quickly, it uses the [related github polymer_web_components](https://github.com/musicsmithnz/pine_web_components) which is a library still in development that contains ready-made components based on typical implementations from the styling frameworks or component libraries [listed below](#libraries). The cli is usable without reference to these libraries, as you have the option to download components peer-to-peer using [IPFS](https://ipfs.io), as well as create your own elements without using these pre-built components at all. The cli tool is a useful way to install components quickly, rapidly speeding development, but it is also designed to be used with IPFS peers. Thus, if a significant number of people use this project, your website resources should load faster as each element will essentially be torrented separately by your peers hosting their own websites with these components.
+`alchmy-cli` is a cli tool for quickly adding and creating webcomponents from different libraries. For adding prebuilt components quickly, it uses the [related github polymer_web_components](https://github.com/alchmy/alchmy_web_components). That library contains the official Polymer elements as well as some other custom components and some elements based on typical implementations from some popular styling frameworks or component libraries [listed below](#libraries). 
 
-It is a new project but I anticipate it being able to save people a lot of time in the future. It is made with Polymer3, using the new standard for importing components with ES modules. I plan to make a easy to use cli tool allowing easy import of web components from the component libraries and styling frameworks. For the styling frameworks, I will need to create the components first based on common paradigms and code snippets from official tutorials and examples. 
+The cli is usable without reference to these libraries to help you create the boiler code for new custom elements and convert markdown to clean HTML5 code. The cli tool is a useful way to install components quickly, rapidly speeding development, but it is also designed to be used with IPFS peers. Thus, if a significant number of people use this project, your website resources should load faster as each element could be downloaded from peers within your neigbourhood. 
 
-#### <a name="libraries"></a>Supported Component Libraries and Styling Frameworks
-
-*component libraries*
+## <a name="libraries"></a>Libraries Planned for Inclusion
 
 * [Polymer Elements](https://www.webcomponents.org/collection/Polymer/elements) - Official Polymer components of Google.
 * [simplajs](https://www.simplajs.org/) - Clean, prebuilt components for user live editing. Helpful for forms, Social media, CMSs.
-
-*styling frameworks*
-
 * [Material Design Components](https://material.io/components/web/catalog) - Official Google Components based on Material Design. Though called components, without Angular or Polymer it's more a styling framework or a framework for building components. See [more](https://github.com/musicsmithnz/pine-cli/tutorial_and_examples/material_design_components/SUMMARY.md).
 * [Semantic-ui](https://semantic-ui.com/) - Clean, modern, easier to use than MDC as there is less to include in the modules.
 * [Materialize](http://next.materializecss.com) - Easy to use Material Design based css framework.
@@ -32,25 +23,20 @@ It is a new project but I anticipate it being able to save people a lot of time 
 * [Bootstrap](https://getbootstrap.com) - Perhaps implemented later.
 * [Foundation](https://foundation.zurb.com) - Perhaps implemented later.
 
-When `pine-cli` is downloaded, one can easily search, download, and insert web components into your own project. At the moment, entire libraries are imported for every element. Obviously this is not ideal. I intend to do some kind of code splicing and tree shakng so that each element has the bare minimum for each library. Bootstrap, Foundation, Material components can then all be easily used together(if you like), and in a much more minimal way. 
+## <a name="contents"></a> Contents
 
-
-# <a name="contents"></a> Contents
-
-#### _There is a * over sections in the Tutorial Contents that show the corresponding feature has not been implemented._
-
-## General
+### General
 
 1. [Introduction](#introduction)
 2. [Summary](#summary)
 3. [Component Libraries and Styling Frameworks](#libraries)
 4. [Contents](#contents)
 
-## Tutorial
+### Tutorial
 
 1. [Installation](#installation)
     1. [Environment Setup](#environment-setup)
-    2. [pine-cli Setup](#spinec-setup)
+    2. [alchmy-cli Setup](#alchmy-setup)
 2. [Building the App](#building)
     1. [Building Method 1 (Recommended) - Adding and Linking to Prebuilt Components](#building-method-1)
     2. [Building Method 2 - Downloading, Customizing and Building Your Own Components](#building-method-2) *
@@ -65,7 +51,7 @@ ___
 ### 1. <a name="installation"></a>Installation
 
 #### <a name="environment-setup"></a>Environment Setup
-If you are not starting a project from scratch, skip to [pine-cli setup](#spinec-setup). Sometimes Linux users have trouble with global installations of npm packages due to [permissions errors](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
+If you are not building an environment from scratch, skip to [alchmy-cli setup](#alchmy-setup). Sometimes Linux users have trouble with global installations of npm packages due to [permissions errors](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
@@ -76,7 +62,7 @@ mkdir myproject
 cd myproject
 ```
 
-#### <a name="pine-cli-setup"></a>spinec Setup
+#### <a name="alchmy-cli-setup"></a>alchmy Setup
 
 ```bash
 npm init -y
@@ -85,8 +71,6 @@ npm install pine-cli --global
 wget --output-document=index.html https://ipfs.io/ipfs/QmWckGtnq3dnFWuJUqqwPQ7HWH28SA31RWN7VZREGStgFR
 mkdir -p src/components
 ```
-
-This will install a global command that can be used right away to help you build a website by downloading ready made components and automatically injecting references to them into an `index.html` file. The references can be to any repository mentioned in [Serving](#serving).
 
 ### 2. <a name="building"></a>Building the App
 
