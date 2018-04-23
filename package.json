@@ -1,8 +1,8 @@
 {
-  "name": "@alchmy/generator-alchmy",
-  "version": "0.0.01",
+  "name": "generator-alchmy",
+  "version": "0.0.206",
   "description": "a generator for mixing web components and constructing distributed apps. Utilizes Polymer IPFS Node Express.",
-  "homepage": "https://alchmy.github.io/alchmy-cli",
+  "homepage": "https://alchmy.github.io/alchmy",
   "author": "Raymond Smith",
   "keywords": [
     "alchmy",
@@ -18,17 +18,17 @@
   "devDependencies": {
     "@babel/core": "*7.0.0-beta.40",
     "@babel/preset-env": "*7.0.0-beta.40",
-    "@webcomponents/webcomponentsjs": "^1.1.0",
+    "@webcomponents/webcomponentsjs": "^1.2.0",
     "babel-loader": "*7.1.4",
-    "html-webpack-plugin": "^3.0.6",
+    "html-webpack-plugin": "^3.2.0",
     "nsp": "^2.6.3",
-    "webpack": "^4.1.0",
-    "webpack-cli": "^2.0.10",
-    "yeoman-assert": "^3.1.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-generator": "^2.0.4",
     "yeoman-test": "^1.7.0",
-    "yeoman-generator": "^2.0.1",
-    "yo": "^2.0.1",
-    "yosay": "^2.0.1"
+    "yo": "^2.0.2",
+    "yosay": "^2.0.2"
   },
   "scripts": {
     "build:dev": "webpack --mode development --config config/webpack.config.dev.js",
@@ -39,8 +39,8 @@
   "dependencies": {
     "@polymer/polymer": "^3.0.0-pre.12",
     "chai": "^4.1.2",
-    "chalk": "^2.1.0",
-    "express": "^4.16.2",
+    "chalk": "^2.4.0",
+    "express": "^4.16.3",
     "fs-extra": "^5.0.0"
   },
   "directories": {
