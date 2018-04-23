@@ -3,6 +3,27 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
+const defaultGreeting=`
+       (:::::)   
+        |${chalk.green(' + ')}|::) 
+   (::::|   |${chalk.yellow('+')}|  
+    |${chalk.blue('+  ')}|${chalk.green('  +')}| |  
+    |   |   |${chalk.yellow('++')}\\ 
+    |${chalk.blue(' + ')}|${chalk.green('+  ')}|${chalk.yellow('+++')}\\
+   /${chalk.blue('++++')}|   |${chalk.yellow('++++')}
+  /${chalk.blue('++++')}/${chalk.green('+++++')}\\${chalk.yellow('+++')}
+ /${chalk.blue('++++')}/${chalk.green('+++++++')}\\${chalk.yellow('++')}
+(${chalk.blue('++++')}/${chalk.green('+++++++++')}\\-
+(${chalk.blue('+++')}/${chalk.green('+++++++++++')}\\
+ '-/${chalk.green('+++++++++++++')}\\
+  /${chalk.green('+++++++++++++++')}\\
+ (${chalk.green('+++++++++++++++++')})
+ (${chalk.green('+++++++++++++++++')})
+  '---------------'
+`
+
+
+
 module.exports = class extends Generator {
     constructor(args, opts) {
         super(args, opts);
@@ -20,7 +41,7 @@ module.exports = class extends Generator {
                 type: 'input',
                 name: 'app_name',
                 message: 'please enter the name of your app',
-                default: this.config.get('app_name') || 'Magnum-Ops. A work of gold!',
+                default: this.config.get('app_name') || 'Magnum-Opus!',
                 store: true
             },
             {
@@ -66,7 +87,7 @@ module.exports = class extends Generator {
     }
 
     writing() {
-        var source=this.templatePath('./' + this.config.get('template_name')) 
+        var source=this.templatePath(this.config.get('template_name')) 
         var destination=this.destinationPath()
 
         var files = [
