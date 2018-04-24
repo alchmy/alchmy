@@ -3,25 +3,35 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-const defaultGreeting=`
-       (:::::)   
-        |${chalk.green(' + ')}|::) 
-   (::::|   |${chalk.yellow('+')}|  
-    |${chalk.blue('+  ')}|${chalk.green('  +')}| |  
-    |   |   |${chalk.yellow('++')}\\ 
-    |${chalk.blue(' + ')}|${chalk.green('+  ')}|${chalk.yellow('+++')}\\
-   /${chalk.blue('++++')}|   |${chalk.yellow('++++')}
-  /${chalk.blue('++++')}/${chalk.green('+++++')}\\${chalk.yellow('+++')}
- /${chalk.blue('++++')}/${chalk.green('+++++++')}\\${chalk.yellow('++')}
-(${chalk.blue('++++')}/${chalk.green('+++++++++')}\\-
-(${chalk.blue('+++')}/${chalk.green('+++++++++++')}\\
- '-/${chalk.green('+++++++++++++')}\\
-  /${chalk.green('+++++++++++++++')}\\
- (${chalk.green('+++++++++++++++++')})
- (${chalk.green('+++++++++++++++++')})
-  '---------------'
+var intro_message = `
+╭─────────────────────╮
+│                                          │
+│  Welcome to the ${chalk.blueBright('alchmy')} generator for     │
+│  generating web apps with modular web    │
+│  components. This generator  will guide  │
+│  you through the creation of a web app.  │
+│  The components utilize Polymer, IPFS,   │
+│  Node and Express.                       │ 
+│                                          │   
+╰─────────────────────╯
 `
-
+const greeting=`
+       (:::::)   
+        |${chalk.green(' + ')}|::) ╭─────────────────────╮
+   (::::|   |${chalk.yellow('+')}|  │                                          │
+    |${chalk.blue('+  ')}|${chalk.green('  +')}| |  │  Welcome to the ${chalk.blueBright('alchmy')} generator for     │
+    |   |   |${chalk.yellow('++')}\\ │  generating web apps with modular web    │
+    |${chalk.blue(' + ')}|${chalk.green('+  ')}|${chalk.yellow('+++')}\\│  components. This generator  will guide  │
+   /${chalk.blue('++++')}|   |${chalk.yellow('++++')}│  you through the creation of a web app.  │ 
+  /${chalk.blue('++++')}/${chalk.green('+++++')}\\${chalk.yellow('+++')}│  The components utilize Polymer, IPFS,   │
+ /${chalk.blue('++++')}/${chalk.green('+++++++')}\\${chalk.yellow('++')}│  Node and Express.                       │ 
+(${chalk.blue('++++')}/${chalk.green('+++++++++')}\\-│                                          │   
+(${chalk.blue('+++')}/${chalk.green('+++++++++++')}\\╰─────────────────────╯ 
+ '-/${chalk.green('+++++++++++++')}\\
+  (${chalk.green('+++++++++++++++')})
+  (${chalk.green('+++++++++++++++')})
+   '-------------'
+`
 
 
 module.exports = class extends Generator {
@@ -30,11 +40,7 @@ module.exports = class extends Generator {
         this.option('babel'); // This method adds support for a `--babel` flag
     }
     prompting() {
-        this.log(
-            yosay(
-                `Welcome to the ${chalk.blueBright('alchmy')} generator for generating web apps with modular web components. This generator will guide you through the creation of a web app. The components utilize Polymer, IPFS, Node and Express.`
-            )
-        );
+        this.log( greeting);
 
         const prompts = [
             {
