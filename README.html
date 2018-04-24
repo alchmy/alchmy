@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<link rel="manifest" href="site.webmanifest"> <link rel="apple-touch-icon" href="icon.png">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  </head>
+  <body>
+    <main>
+      <h1>alchmy</h1>
+      <p>A generator for the Alchmy ecosystem that makes it easy to add components from the ecosystem onto a webpage.
+          Making it trivial to create beautiful webpages. Moreover, Alchmy is designed to be decentralized, so that the
+          individual components can be downloaded separately, which, at scale, means that much of the data from many
+          websites will already be cached. Reusable, fast, easy-to-use, easy-to-maintain.</p>
+      <h2>Summary</h2>
+      <p><code>alchmy</code> is a tool for quickly adding and creating webcomponents from different libraries. For
+          adding prebuilt components quickly, it uses the <a
+          href="https://github.com/alchmy/alchmy_web_components">related github polymer<em>web</em>components</a>. That
+          library contains the official Polymer elements as well as some other custom components and some elements based
+          on typical implementations from some popular styling frameworks or component libraries <a
+          href="#libraries">listed below</a>.</p>
+      <p>The cli is usable without reference to these libraries to help you create the boiler code for new custom
+          elements and convert markdown to clean HTML5 code. The cli tool is a useful way to install components quickly,
+          rapidly speeding development, but it is also designed to be used with IPFS peers. Thus, if a significant
+          number of people use this project, your website resources should load faster as each element could be
+          downloaded from peers within your neigbourhood.</p>
+      <h2>&lt;a name=&quot;libraries&quot;&gt;&lt;/a&gt;Libraries Planned for Inclusion</h2>
+      <ul><li><a href="https://www.webcomponents.org/collection/Polymer/elements">Polymer Elements</a> - Official
+          Polymer components of Google.</li><li><a href="https://www.simplajs.org/">simplajs</a> - Clean, prebuilt
+          components for user live editing. Helpful for forms, Social media, CMSs.</li><li><a
+          href="https://material.io/components/web/catalog">Material Design Components</a> - Official Google Components
+          based on Material Design. Though called components, without Angular or Polymer it&#39;s more a styling
+          framework or a framework for building components.</li><li><a href="https://semantic-ui.com/">Semantic-ui</a> -
+          Clean, modern, easier to use than MDC as there is less to include in the modules.</li><li><a
+          href="http://next.materializecss.com">Materialize</a> - Easy to use Material Design based css
+          framework.</li><li><a href="https://www.muicss.com">MUI</a> - Lightweight framework based on Googles Material
+          Design.</li></ul>
+      <h2>&lt;a name=&quot;contents&quot;&gt;&lt;/a&gt; Contents</h2>
+      <h3>General</h3>
+      <ol><li><a href="#introduction">Introduction</a></li><li><a href="#Summary">Summary</a></li><li><a
+          href="#libraries">Component Libraries and Styling Frameworks</a></li><li><a
+          href="#contents">Contents</a></li></ol>
+      <h3>Tutorial</h3>
+      <ol><li><a href="#installation">Installation</a><ol><li><a href="#environment-setup">Environment
+          Setup</a></li><li><a href="#alchmy-setup">alchmy Setup</a></li></ol></li><li><a href="#building">Building the
+          App</a><ol><li><a href="#building-1">Initialize - Installing A Template</a></li><li><a
+          href="#building-2">Improving - Adding Prebuilt Components</a></li><li><a href="#building-3">Improving - Mixing
+          Your Own Components</a></li></ol></li><li><a href="#serving">Serving</a><ol><li><a href="#serving-1">Serving
+          Method 1 - Serving from IPFS</a></li><li><a href="#serving-2">Serving Method 2 - Serving from Local/Own
+          Server</a></li></ol></li></ol>
+      <hr>
+      <h3>1. &lt;a name=&quot;installation&quot;&gt;&lt;/a&gt;Installation</h3>
+      <h4>&lt;a name=&quot;environment-setup&quot;&gt;&lt;/a&gt;Environment Setup</h4>
+      <p>If you are not building an environment from scratch, skip to <a href="#alchmy-setup">alchmy setup</a>.
+          Sometimes Linux users have trouble with global installations of npm packages due to <a
+          href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">permissions errors</a>.</p>
+      <p><code>bash curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash source ~/.bashrc
+          nvm install node nvm use node mkdir &lt;myproject&gt; cd &lt;myproject&gt;</code></p>
+      <h4>&lt;a name=&quot;alchmy-cli-setup&quot;&gt;&lt;/a&gt;alchmy Setup</h4>
+      <p><code>bash yarn init -y yarn add alchmy --save yarn add alchmy --global</code></p>
+      <h3>2. &lt;a name=&quot;building&quot;&gt;&lt;/a&gt;Building the App</h3>
+      <p>There are two main commands to be used to build a website. You can stick with one method, or you can do a
+          little of each.</p>
+      <ol><li><a href="#building-method-1">Building Method 1</a> - Adding prebuilt elements using <code>alchmy add
+          prebuilt-component-name</code></li><li><a href="#building-method-2">Building Method 2</a> - building your own
+          components using <code>alchmy new my-custom-component-name</code></li></ol>
+      <p>These two methods can be combined on the same project. If you want a simple introduction, choose <a
+          href="#building-method-1">Building Method 1</a></p>
+      <h4>&lt;a name=&quot;building-method-1&quot;&gt;&lt;/a&gt;Building Method 1 - Linking to Components (in P2P/IPFS
+          or other Repo)</h4>
+      <p><code>bash alchmy add materialize-navbar alchmy add mui-grid-fluid-1-2 alchmy add materialize-footer</code> The
+          <code>&lt;materialize-navbar&gt;</code> and <code>&lt;materialize-footer&gt;</code> above will probably be
+          exactly what you expect. The first word of the tag name is the css styling framework that is used, and the
+          following words are a description of the tags content. The <code>&lt;mui-grid-fluid-1-2&gt;</code> is a grid
+          for placing other elements inside. The <code>1-2</code> at the end represents the basic layout of the site.
+          Which means the right section is twice the width of the left section.</p>
+      <p>Once each component has been added, a reference to the component will be inserted into your
+          <code>index.html</code> file. At this point, you should be able to use the webcomponents within your
+          <code>index.html</code> just like you would use any other html tag. For example, you could use the elements
+          you added above like this:</p>
+      <p><code>html &lt;body&gt; &lt;header&gt; &lt;materialize-navbar&gt;&lt;/materialize-navbar&gt; &lt;/header&gt;
+          &lt;main&gt; &lt;mui-grid-fluid-1-2&gt;&lt;/mui-grid-fluid-1-2&gt; &lt;/main&gt; &lt;footer&gt;
+          &lt;materialize-footer&gt;&lt;/materialize-footer&gt; &lt;/footer&gt; &lt;/body&gt;</code></p>
+      <h4>&lt;a name=&quot;building-method-2&quot;&gt;&lt;/a&gt;Building Method 2 - Downloading, Building, and
+          Customizing New Components</h4>
+      <p><code>bash alchmy new my-custom-navbar -s materialize alchmy new my-custom-grid alchmy new my-custom-table -h
+          html_template_url alchmy new materialize-footer -b polymer_component_url</code></p>
+      <p>This code shows you how to create your own polymer web components. These components will be placed into a
+          <code>components</code> folder. Note the options that can be used with this tag.</p>
+      <p>Using <code>-s</code> you can add the name of one of the supported frameworks listed in the introduction and it
+          will include links to the libraries in your polymer component. Note, this may use a lot of unnecessary code,
+          as it includes the libraries separately for each element. This might be a problem, but your browser also might
+          solve this automatically with cacheing. Also note, styles do leak out of Web Components in Firefox, but they
+          don&#39;t in Chrome. It is better at this stage to stick with using one styling framework. I hope to include
+          tools in this <code>alchmy</code> later that will make it easier to <a
+          href="https://en.wikipedia.org/wiki/Tree_shaking">treeshake</a>. Until then, stick with one styling framework
+          or deal with the consequences.</p>
+      <p>The <code>-h</code> option needs to be followed by a the path or url of html that you wish to be included in
+          the template. This is mostly useful for converting blocks of html into polymer web components. In the future,
+          this might be able to be used in batch processes to crawl websites and produce custom components
+          programatically, perhaps in conjunction with <a href="https://pypi.python.org/pypi/beautifulsoup4/">Beautiful
+          Soup</a> or a Javascript equivalent, perhaps <a href="https://github.com/SeleniumHQ/selenium">Selenium</a> or
+          <a href="https://github.com/segmentio/nightmare">Nightmare</a>.</p>
+      <p>The <code>-b</code> tag allows you to choose a base component to use, which will use the path/url given but it
+          will give the component the name you specify. This is useful for modifying existing prebuilt components. The
+          downside is that these will not exist on IPFS peer hosting and you will have to link to these components
+          locally or add the component to IPFS and host the component from there(you will be your own peer).</p>
+      <p>The following options can be used to specify a download source when youWhen the <code>--github</code>,
+          <code>--cdn</code>, <code>--ipfs</code>, <code>--local</code> tags are implemented with the , they will
+          specify where the component should be hosted.</p>
+      <h4>&lt;a name=&quot;building-method-3&quot;&gt;&lt;/a&gt;Building Method 3 - Installing a Prebuilt-App</h4>
+      <p>This hasn&#39;t been started, but will be implemented eventually. It will have a bunch of examples, and users
+          can submit their prebuilt templates.The github repo and documentation will be the first instance of this.</p>
+      <h3>3. &lt;a name=&quot;serving&quot;&gt;&lt;/a&gt;Serving</h3>
+      <p>You can serve the web components of this app through any method you like, the built-in methods are local, ipfs,
+          and github, but with an option of serving from arbitrary links. Any custom components need to be served by
+          something that you set up. You can set up local hosting, your own link, or an IPFS server(this is the
+          recommended method, and the inspiration of this project). Since your html file is edited by you, it will need
+          to set up by you. Any non-modified components can be downloaded from IPFS(I am hosting the components, in
+          time, I hope others will join me hosting these components in IPFS, so it will be fast for all of us :) ), or
+          you could download them yourself and make your <code>index.html</code> references to your components
+          local.</p>
+      <ol><li><a href="#serving-method-1">Serving Method 1</a> - (Recommended when developed) IPFS</li><li><a
+          href="#serving-method-2">Serving Method 4</a> - (Recommended) Local</li></ol>
+      <h4>&lt;a name=&quot;serving-method-1&quot;&gt;&lt;/a&gt;Serving Method 1 - (Use <a
+          href="#serving-method-4">local</a> until this is completed, local is default) IPFS</h4>
+      <p><code>bash alchmy add materialize-navbar --ipfs</code></p>
+      <p><em>or</em></p>
+      <p><code>bash alchmy new my-custom-tabs --ipfs</code></p>
+      <p>To start your own IPFS server, see the video linked under this paragraph. More information will be written
+          about this soon. This is the recommended method. It is experimental, but the hope is that the components
+          should be loaded quickly if a lot of people use them. And components are incredibly reusable as they are so
+          modular and self-contained, and the styles are not supposed to leak outside of the component itself(<a
+          href="https://www.webcomponents.org/community/articles/introduction-to-shadow-dom">The Shadow DOM</a>),
+          although they do leak in Firefox 52.6!</p>
+      <p><a
+          href="https://ipfs.io/ipfs/QmXXuLvSGQq8XA6LEVeiYYEeogzSo6WPEf9XdXoP1i7UxF/How%20to%20Host%20a%20Website%20with%20IPFS.mp4">Tutorial: Start an IPFS server and host files on the IPFS Network</a></p>
+      <h4>&lt;a name=&quot;serving-method-2&quot;&gt;&lt;/a&gt;Serving Method 2 - Local/Your own server</h4>
+      <p><code>bash alchmy add materialize-navbar --local</code></p>
+      <p><em>or</em></p>
+      <p><code>bash alchmy new my-custom-tabs --local</code></p>
+      <p>Presently only this method is working. The imports need to be changed in the other models to be hostable from a
+          remote source.</p>
+    </main>
+    <footer></footer>
+  </body>
+</html>
