@@ -1,6 +1,6 @@
 {
   "name": "alchmy",
-  "version": "0.0.20614713",
+  "version": "0.0.20614715",
   "description": "a generator for mixing web components and constructing distributed apps. Utilizes Polymer IPFS Node Express.",
   "homepage": "https://alchmy.github.io/alchmy",
   "author": "Raymond Smith",
@@ -16,7 +16,7 @@
     "yeoman-generator"
   ],
   "bin": {
-      "alchmy": "lib/alchmy.js"
+      "alchmy": "lib/alchmy.sh"
   },
   "devDependencies": {
     "@babel/core": "*7.0.0-beta.40",
