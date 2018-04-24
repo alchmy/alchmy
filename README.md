@@ -12,7 +12,7 @@ The cli is usable without reference to these libraries to help you create the bo
 
 * [Polymer Elements](https://www.webcomponents.org/collection/Polymer/elements) - Official Polymer components of Google.
 * [simplajs](https://www.simplajs.org/) - Clean, prebuilt components for user live editing. Helpful for forms, Social media, CMSs.
-* [Material Design Components](https://material.io/components/web/catalog) - Official Google Components based on Material Design. Though called components, without Angular or Polymer it's more a styling framework or a framework for building components. See [more](https://github.com/musicsmithnz/pine-cli/tutorial_and_examples/material_design_components/SUMMARY.md).
+* [Material Design Components](https://material.io/components/web/catalog) - Official Google Components based on Material Design. Though called components, without Angular or Polymer it's more a styling framework or a framework for building components. 
 * [Semantic-ui](https://semantic-ui.com/) - Clean, modern, easier to use than MDC as there is less to include in the modules.
 * [Materialize](http://next.materializecss.com) - Easy to use Material Design based css framework.
 * [MUI](https://www.muicss.com) - Lightweight framework based on Googles Material Design. 
@@ -101,15 +101,15 @@ Once each component has been added, a reference to the component will be inserte
 #### <a name="building-method-2"></a>Building Method 2 - Downloading, Building, and Customizing New Components
 
 ```bash
-pine-cli new my-custom-navbar -s materialize
-pine-cli new my-custom-grid 
-pine-cli new my-custom-table -h html_template_url
-pine-cli new materialize-footer -b polymer_component_url
+alchmy new my-custom-navbar -s materialize
+alchmy new my-custom-grid 
+alchmy new my-custom-table -h html_template_url
+alchmy new materialize-footer -b polymer_component_url
 ```
 
 This code shows you how to create your own polymer web components. These components will be placed into a `components` folder. Note the options that can be used with this tag. 
 
-Using `-s` you can add the name of one of the supported frameworks listed in the introduction and it will include links to the libraries in your polymer component. Note, this may use a lot of unnecessary code, as it includes the libraries separately for each element. This might be a problem, but your browser also might solve this automatically with cacheing. Also note, styles do leak out of Web Components in Firefox, but they don't in Chrome. It is better at this stage to stick with using one styling framework. I hope to include tools in this `pine-cli` later that will make it easier to [treeshake](https://en.wikipedia.org/wiki/Tree_shaking). Until then, stick with one styling framework or deal with the consequences.
+Using `-s` you can add the name of one of the supported frameworks listed in the introduction and it will include links to the libraries in your polymer component. Note, this may use a lot of unnecessary code, as it includes the libraries separately for each element. This might be a problem, but your browser also might solve this automatically with cacheing. Also note, styles do leak out of Web Components in Firefox, but they don't in Chrome. It is better at this stage to stick with using one styling framework. I hope to include tools in this `alchmy` later that will make it easier to [treeshake](https://en.wikipedia.org/wiki/Tree_shaking). Until then, stick with one styling framework or deal with the consequences.
 
 The `-h` option needs to be followed by a the path or url of html that you wish to be included in the template. This is mostly useful for converting blocks of html into polymer web components. In the future, this might be able to be used in batch processes to crawl websites and produce custom components  programatically, perhaps in conjunction with [Beautiful Soup](https://pypi.python.org/pypi/beautifulsoup4/) or a Javascript equivalent, perhaps [Selenium](https://github.com/SeleniumHQ/selenium) or [Nightmare](https://github.com/segmentio/nightmare).
 
