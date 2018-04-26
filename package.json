@@ -1,6 +1,6 @@
 {
   "name": "generator-alchmy",
-  "version": "0.0.20615",
+  "version": "0.0.206151",
   "description": "a generator for mixing web components and constructing distributed apps. Utilizes Polymer IPFS Node Express.",
   "homepage": "https://alchmy.github.io/alchmy",
   "author": "Raymond Smith",
@@ -41,6 +41,7 @@
     "express": "^4.16.3",
     "fs-extra": "^5.0.0",
     "install": "^0.11.0",
+    "materialize-css": "^1.0.0-beta",
     "node-sass": "^4.9.0",
     "underscore": "^1.9.0",
     "util.promisify": "^1.0.0",
