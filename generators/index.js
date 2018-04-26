@@ -57,8 +57,9 @@ module.exports = class extends Generator {
                 default: this.config.get('app_name') || 'homepage',
                 store: true,
                 choices: [
+                    "boilerplate-html",
                     "material-generic",
-                    "browser-homepage"
+                    "alchmy-homepage"
                 ]
             },
             {
@@ -82,12 +83,27 @@ module.exports = class extends Generator {
                         checked: true
                     }
                 ]
+            },
+            {
+                type: 'input',
+                name: 'primary_color',
+                message: 'Primary color[hex value or name]:',
+                default: '#687856',
+                store: true
+            },
+            {
+                type: 'input',
+                name: 'secondary_color',
+                message: 'Secondary color[hex value or name]:',
+                default: '#685678',
+                store: true
             }
         ];
-
         return this.prompt(prompts).then(answers => {
             this.config.set('app_name', answers.app_name)
             this.config.set('template_name', answers.template_name)
+            this.config.set('primary_color', answers.primary_color)
+            this.config.set('secondary_color', answers.secondary_color)
             this.config.save();
         });
     }
@@ -95,6 +111,8 @@ module.exports = class extends Generator {
     writing() {
         var source=this.templatePath(this.config.get('template_name')) 
         var destination=this.destinationPath()
+        console.log(this.templatePath())
+        console.log(source)
 
         var files = [
             "/src/css",

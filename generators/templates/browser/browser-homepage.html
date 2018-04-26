@@ -1,0 +1,21 @@
+<paper-button id="b1" data-role="drag-drop-target">paper-button</paper-button>
+<paper-button id="b2" data-role="drag-drop-target">lucent-thumbnail</paper-button>
+<paper-button id="b3" data-role="drag-drop-target">materialize-navbar</paper-button>
+<paper-button id="b4" data-role="drag-drop-target">materialize-footer</paper-button>
+<div class="column">
+    <div id="div1" ondrop="dropped(event)" ondragover="allowDrop(event)" class="row">
+        <lucent-thumbnail 
+            id="t1" 
+            data-role="drag-drop-target" 
+            link="https://www.polymer-project.org" 
+            class="col s4">
+                Polymer Project
+        </lucent-thumbnail>
+        <lucent-thumbnail id="t2" data-role="drag-drop-target" link="https://www.pluralsight.com" class="col s4">Pluralsight</lucent-thumbnail>
+        <lucent-thumbnail id="t3" data-role="drag-drop-target" link="https://www.coursera.org" class="col s4">Coursera</lucent-thumbnail>
+        <lucent-thumbnail id="t4" data-role="drag-drop-target" link="https://www.github.com" class="col s4">Github.com</lucent-thumbnail>
+        <lucent-thumbnail id="t5" data-role="drag-drop-target" link="https://www.lucentmonkey.com" class="col s4">lucentmonkey.com</lucent-thumbnail>
+        <lucent-thumbnail id="t6" data-role="drag-drop-target" link="https://www.binance.com" class="col s4">binance.com</lucent-thumbnail>
+    </div>
+    <div id="search-row" data-role="drag-drop-target" class="row"><search-ddg></search-ddg></div>
+</div>

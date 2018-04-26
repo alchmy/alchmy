@@ -2,7 +2,9 @@
 
 A generator for the Alchmy ecosystem that makes it easy to add components from the ecosystem onto a webpage. Making it trivial to create beautiful webpages. Moreover, Alchmy is designed to be decentralized, so that the individual components can be downloaded separately, which, at scale, means that much of the data from many websites will already be cached. Reusable, fast, easy-to-use, easy-to-maintain.
 
-## Summary
+## Summary 
+
+<a id="summary"></a>
 
 `alchmy` is a tool for quickly adding and creating webcomponents from different libraries. For adding prebuilt components quickly, it uses the [related github polymer_web_components](https://github.com/alchmy/alchmy_web_components). That library contains the official Polymer elements as well as some other custom components and some elements based on typical implementations from some popular styling frameworks or component libraries [listed below](#libraries). 
 
@@ -22,7 +24,7 @@ The cli is usable without reference to these libraries to help you create the bo
 ### General
 
 1. [Introduction](#introduction)
-2. [Summary](#Summary)
+2. [Summary](#summary)
 3. [Component Libraries and Styling Frameworks](#libraries)
 4. [Contents](#contents)
 
