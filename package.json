@@ -1,6 +1,6 @@
 {
   "name": "generator-alchmy",
-  "version": "0.0.20614719",
+  "version": "0.0.20615",
   "description": "a generator for mixing web components and constructing distributed apps. Utilizes Polymer IPFS Node Express.",
   "homepage": "https://alchmy.github.io/alchmy",
   "author": "Raymond Smith",
@@ -40,6 +40,10 @@
     "chalk": "^2.4.0",
     "express": "^4.16.3",
     "fs-extra": "^5.0.0",
+    "install": "^0.11.0",
+    "node-sass": "^4.9.0",
+    "underscore": "^1.9.0",
+    "util.promisify": "^1.0.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-generator": "^2.0.4",
     "yeoman-test": "^1.7.0",
@@ -53,6 +57,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alchmy/alchmy-cli"
+    "url": "https://github.com/alchmy/alchmy"
   }
 }

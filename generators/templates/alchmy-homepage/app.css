@@ -1,0 +1,36 @@
+body {
+    display: flex; 
+    min-height: 100vh;
+    flex-direction: column;
+    --theme-primary: #666688;
+    background: #eaeaea;
+    --my-theme-color: #344152;
+    --my-light-theme-color: #8491c2;
+}
+
+main {
+    flex: 1 0 auto;
+}
+paper-button {
+    background: var( --theme-primary, #1454589);
+}
+app-toolbar {
+    background: var( --theme-primary, #1454589);
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.row{
+    width: 50em;
+}
+.drag{
+    background-color: red;
+    opacity: 0.25;
+}
+.over{
+    background-color: green;
+}
+

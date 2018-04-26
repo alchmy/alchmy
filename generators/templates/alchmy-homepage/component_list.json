@@ -1,0 +1,30 @@
+[
+	"@alchmy/materialize-column",
+	"@alchmy/materialize-navbar",
+	"@alchmy/materialize-panel",
+	"@alchmy/materialize-accordion",
+	"@alchmy/materialize-footer",
+	
+	"@alchmy/alchmy-search",
+	"@alchmy/alchmy-thumbnail",
+	"@alchmy/mui-button",
+	
+	"@polymer/helpers@next",
+	"@polymer/app-drawer@next",
+	"@polymer/app-drawer-layout@next",
+	"@polymer/app-grid-style@next",
+	"@polymer/app-header@next",
+	"@polymer/app-header-layout@next",
+	"@polymer/app-toolbar@next",
+	"@polymer/app-box@next",
+	"@polymer/iron-icons@next",
+	
+	"@polymer/paper-button@next",
+	"@polymer/paper-swatch-picker@next",
+	"@polymer/paper-item@next",
+	"@polymer/paper-icon-button@next",
+	"@polymer/iron-iconset-svg@next",
+	"@polymer/paper-listbox@next",
+	"@polymer/paper-menu-button@next",
+	"@polymer/iron-flex-layout@next"
+]
